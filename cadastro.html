@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/style_cadastro.css">
+    <script src="js/script.js" defer></script>
+    <!-- O atributo defer garante que o script seja executado após o carregamento completo do HTML, o que é mais eficiente no caso de preenchimento de dados do usuário -->
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Página Inicial</a>
+        </nav>
+    </header>
+    <main>
+        <div id="cadastro">
+            <h1>Cadastro de Gasto:</h1>
+            <form id="form_cadastro"> <!-- Formulário para cadastrar um gasto -->
+                    <!-- Nome/Descrição -->
+                    <label for="nome_descricao">Nome/Descrição:</label>
+                    <input type="text" id="nome_descricao" required><br><br>
+                
+                    <!-- Categoria -->
+                    <label for="categoria">Categoria:</label>
+                    <input type="text" id="categoria" required><br><br>
+                
+                    <!-- Data -->
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" required><br><br>
+
+                    <!-- Valor -->
+                    <label for="valor">Valor:</label>
+                    <input type="text" id="valor" required onblur="formatar_valor(event)"><br><br>
+
+                    <!-- Opção de Receita ou Despesa -->
+                    <label for="tipo">Tipo:</label>
+                    <select name="tipo" id="tipo">
+                        <option value="Receita">Receita</option>
+                        <option value="Despesa">Despesa</option>
+                    </select><br><br>
+
+                    <!-- Botão de envio -->
+                    <button type="submit">Enviar</button>
+                  </form>
+            </form>
+        </div> 
+    </main>
+</body>
+
+</html>
